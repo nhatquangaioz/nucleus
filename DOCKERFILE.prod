@@ -1,0 +1,8 @@
+FROM atlassian/nucleus
+
+COPY config.js /opt/service/config.js
+RUN yarn add -D make-dir-cli@^1.0.0 serve@^6.1.0
+COPY package.json /opt/service/package.json
+
+ENTRYPOINT ["yarn", "start"]
+

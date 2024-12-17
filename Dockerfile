@@ -1,6 +1,8 @@
-FROM node:8
+FROM node:14
 
-RUN apt update && apt install createrepo dpkg-dev apt-utils gnupg2 gzip -y && rm -rf /var/lib/apt/lists/*
+# RUN apt-get update
+# RUN apt install createrepo dpkg-dev apt-utils gnupg2 gzip -y 
+# RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/service
 
